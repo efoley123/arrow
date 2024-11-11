@@ -20,10 +20,10 @@ class TestGenerator:
      self.model = os.getenv('OPENAI_MODEL', 'gpt-3.5-turbo')
      
      try:
-         self.max_tokens = int(os.getenv('OPENAI_MAX_TOKENS', '2000'))
+         self.max_tokens = int(os.getenv('OPENAI_MAX_TOKENS', '10000'))
      except ValueError:
-         logging.error("Invalid value for OPENAI_MAX_TOKENS. Using default value: 2000")
-         self.max_tokens = 2000
+         logging.error("Invalid value for OPENAI_MAX_TOKENS. Using default value: 10000")
+         self.max_tokens = 10000
 
      if not self.api_key:
          raise ValueError("OPENAI_API_KEY environment variable is not set")
