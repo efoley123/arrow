@@ -132,7 +132,7 @@ class TestGenerator:
               #print("this is the directory"+str(directory)+"\n")
               #just going to look in current directory
               test_files =  list(directory.rglob("tests.py")) + list(directory.rglob("test.py")) + list(directory.rglob("test_*.py")) + list(directory.rglob("*_test.py"))
-              #print("\n related TEST FILES HERE "+ ', '.join(str(file) for file in test_files) + "\n")
+              print("\n related TEST FILES HERE "+ ', '.join(str(file) for file in test_files) + "\n")
               #print("print statement above\n")
               for file in test_files:
                   with open(file, 'r') as f:
@@ -476,7 +476,7 @@ class TestGenerator:
               
               if prompt:
                   
-                  test_cases = self.call_openai_api(prompt)
+                  #test_cases = self.call_openai_api(prompt)
                   
                   if test_cases:
                       test_cases = test_cases.replace("“", '"').replace("”", '"')
