@@ -265,6 +265,8 @@ class TestGenerator:
                if language.lower() == 'python':
                    subprocess.check_call([sys.executable, '-m','pip','install', 'pytest-cov'])
                    logging.info(f"Coverage tool for Python has been installed.")
+                   subprocess.check_call([sys.executable, '-m','pip','install', 'arrow.factory'])
+                   logging.info(f"Module installed.")
                elif language.lower() == 'javascript':
                    subprocess.check_call(['npm', 'install', 'jest'])
                    logging.info(f"Coverage tool for JavaScript (jest) has been installed.")
